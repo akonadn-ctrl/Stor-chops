@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ساعة فاخرة - أكادير</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0 10px;
+}
+
+.price {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #b88a20;
+  margin: 15px 0;
+}
+
+.info {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+form {
+  margin-top: 25px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 90px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #25D366;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.phone {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⌚ ساعة فاخرة</h1>
+<p>أناقة وجودة بسعر مناسب</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<img src="watch.jpg" alt="ساعة فاخرة" class="product-image">
+
+<h2 class="product-title">
+ساعة فاخرة وأنيقة
+</h2>
+
+<div class="price">
+150 درهم
+</div>
+
+<div class="info">
+📍 التوصيل في أكادير
+</div>
+
+<form id="orderForm">
+
+<label>الاسم الكامل</label>
+<input type="text" id="name" placeholder="اكتب اسمك" required>
+
+<label>رقم الهاتف</label>
+<input type="tel" id="phone" placeholder="اكتب رقم الهاتف" required>
+
+<label>العنوان</label>
+<textarea id="address" placeholder="اكتب عنوان التوصيل" required></textarea>
+
+<button type="submit">
+🛒 إرسال الطلب عبر واتساب
+</button>
+
+</form>
+
+<a class="phone" href="tel:0783084921">
+📞 اتصل بنا: 0783084921
+</a>
+
+</div>
+</div>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const address = document.getElementById("address").value;
+
+const message =
+"السلام عليكم، أريد طلب الساعة\n\n" +
+"الاسم: "
